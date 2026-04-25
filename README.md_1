@@ -1,0 +1,38 @@
+# Assignment 1: ImageJ Particle Counter
+
+## Overview
+This assignment demonstrates the use of ImageJ software for automated particle counting in microscopy images.
+
+## Objective
+To count and analyze particles (embryos) in a microscopy image using ImageJ image processing techniques.
+
+## Materials
+- Original microscopy image: `embryos.jpg`
+- ImageJ software
+- Processed images showing workflow
+
+## Methodology
+1. **File Import**: Load original embryo image into ImageJ
+2. **Background Subtraction**: Process → Subtract Background (radius: 12)
+3. **Image Conversion**: Image → Adjust → 8-bit
+4. **Threshold Adjustment**: Image → Adjust → Threshold (convert to black and white)
+5. **Binary Processing**: 
+   - Process → Binary → Fill Holes
+   - Process → Binary → Convert to Masks
+   - Process → Binary → Watershed
+6. **Particle Analysis**: Analyze → Analyze Particles (size and circularity parameters)
+7. **Results Export**: Save measurements table as CSV
+
+## Results
+- **Total Particles Counted**: 8
+- **Total Area**: 10846 pixels
+- **Average Particle Size**: 1355.760 pixels
+- **Detailed measurements**: See `Results.embryos.csv`
+
+## Files in Repository
+- `embryos.jpg` - Original microscopy image
+- `embryos_processed.jpg` - Threshold-processed image
+- `Results.embryos.csv` - Quantitative analysis results
+
+## Conclusion
+Successfully demonstrated automated particle counting using ImageJ image analysis pipeline. The workflow effectively identified and quantified 8 embryo particles with detailed morphometric measurements.
